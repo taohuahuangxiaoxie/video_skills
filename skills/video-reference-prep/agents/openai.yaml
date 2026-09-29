@@ -1,0 +1,6 @@
+interface:
+  display_name: "参考视频预处理"
+  short_description: "Prepare silent low-resolution 24 fps references"
+  default_prompt: "使用 $video-reference-prep 按已保存的默认规则完成当前请求。"
+policy:
+  allow_implicit_invocation: true

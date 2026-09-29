@@ -1,0 +1,6 @@
+interface:
+  display_name: "Video Mimic - H3 / Seedance"
+  short_description: "Character video mimic with motion and photo-montage modes"
+  default_prompt: "使用 $h3-video-mimic 模仿参考视频并替换人物；先辨别连续动作、短视频加多图或密集蒙太奇，再确定模型、参考图角色及人工剪辑分工。"
+policy:
+  allow_implicit_invocation: false

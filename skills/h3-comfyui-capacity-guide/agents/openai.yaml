@@ -1,0 +1,3 @@
+interface:
+  display_name: "H3 ComfyUI Capacity Guide"
+  short_description: "Advise VRAM-safe H3 and SDVR2 settings"

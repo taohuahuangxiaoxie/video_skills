@@ -1,0 +1,6 @@
+interface:
+  display_name: "生成视频裁切与元数据清理"
+  short_description: "Trim exact edge frames and clean generated metadata"
+  default_prompt: "使用 $generated-video-finish 按已保存的默认规则完成当前请求。"
+policy:
+  allow_implicit_invocation: true

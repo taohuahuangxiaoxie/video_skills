@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shanghai ComfyUI Remote"
+  short_description: "Inspect and maintain Shanghai ComfyUI over SSH"
+  default_prompt: "Use $comfyui-shanghai-remote to inspect remote logs and system status or maintain assets on the Shanghai ComfyUI workstation."
