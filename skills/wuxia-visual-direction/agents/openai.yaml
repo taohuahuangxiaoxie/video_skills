@@ -1,0 +1,6 @@
+interface:
+  display_name: "东方武侠影像制作"
+  short_description: "沿用唯美武侠仙侠质感，设计机位微表情与声画连续的可剪辑素材"
+  default_prompt: "使用 $wuxia-visual-direction，为这段武侠或仙侠短片设计参考图与镜头提示词，控制人物表情、机位连续性和可剪辑衔接，生成素材不含配乐。"
+policy:
+  allow_implicit_invocation: true

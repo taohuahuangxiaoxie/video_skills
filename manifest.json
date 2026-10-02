@@ -30,7 +30,9 @@
       "cinematic-director",
       "brand-promo-video-generator",
       "minimalist-product-ad-generator",
-      "music-video-subtitle-generator"
+      "music-video-subtitle-generator",
+      "wuxia-emotional-storytelling",
+      "wuxia-visual-direction"
     ],
     "studio": [
       "prompt-master",
@@ -44,7 +46,9 @@
       "cinematic-director",
       "brand-promo-video-generator",
       "minimalist-product-ad-generator",
-      "music-video-subtitle-generator"
+      "music-video-subtitle-generator",
+      "wuxia-emotional-storytelling",
+      "wuxia-visual-direction"
     ],
     "legacy": [
       "h3-video-mimic"
@@ -66,7 +70,13 @@
       "minimalist-product-ad-generator",
       "music-video-subtitle-generator",
       "h3-video-mimic",
-      "comfyui-shanghai-remote"
+      "comfyui-shanghai-remote",
+      "wuxia-emotional-storytelling",
+      "wuxia-visual-direction"
+    ],
+    "wuxia": [
+      "wuxia-emotional-storytelling",
+      "wuxia-visual-direction"
     ]
   },
   "packages": [
@@ -472,6 +482,28 @@
         "agents/openai.yaml": "c7f4458cace50a1d7e7343d30cc4404cfc891f69a822c077105a92056ea3c81c",
         "SKILL.md": "b23685f7873d8f70be45e0cf88592dd1d6a8cefda8e8701867f11c15b1fc1028"
       }
+    },
+    {
+      "name": "wuxia-emotional-storytelling",
+      "path": "skills/wuxia-emotional-storytelling",
+      "role": "武侠仙侠人物创意与剧本：钩子、人物选择和情绪兑现",
+      "dependencies": [],
+      "skill_entries": 1,
+      "files": {
+        "agents/openai.yaml": "15678ee94f3c3216523af2d269cf9c64883c5f3192fe977395f14fcb808ca47d",
+        "SKILL.md": "0a71b3ef6eb5a9dc2c17e7c4b7b53853a1b52f578c8468ccc7084189ee7e69ff"
+      }
+    },
+    {
+      "name": "wuxia-visual-direction",
+      "path": "skills/wuxia-visual-direction",
+      "role": "武侠仙侠影像制作：唯美质感、机位表演和可剪素材",
+      "dependencies": [],
+      "skill_entries": 1,
+      "files": {
+        "agents/openai.yaml": "2b8d8c4dfd2d62fbed6cc73c387e206bbf613b7e4c1e397b7b9b1697b4de44b6",
+        "SKILL.md": "722e78879675d52551bae187aead4f7095ef32c99fac46e4c4c81087fe4832c0"
+      }
     }
   ],
   "exclusions": [
@@ -484,5 +516,6 @@
     ".github",
     ".claude",
     "Python caches"
-  ]
+  ],
+  "updated_at": "2026-10-02"
 }

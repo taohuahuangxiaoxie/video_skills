@@ -1,6 +1,6 @@
 # video_skills 仓库维护约定
 
-- 本仓库保存创作 skills 的可迁移源码。`skills/` 为14个顶层包，Higgsfield的子技能维持原相对目录；不要把子技能复制到顶层造成重复发现或断开引用。
+- 本仓库保存创作 skills 的可迁移源码。顶层包数量以 `manifest.json` 为准；Higgsfield的子技能维持原相对目录，不要把子技能复制到顶层造成重复发现或断开引用。
 - 修改规则时优先更新所属skill；跨技能触发偏好在 `preferences/AGENTS.fragment.md`。用户授权后才安装到其本机技能目录。不要从旧迁移ZIP或历史staging覆盖本仓库的新修改。
 - 人物身份与发型、自然表情的详细规则集中在 `higgsfield-facs` 的本地规则及其 `references/wardrobe-identity-performance.md`；Prompt Master、Soul和父入口只保留必要路由。旧 `h3-video-mimic` 保持显式调用策略。
 - 保留上游许可和作者信息；原工作站容量数字只是历史经验。不要把密码、账号配置、私钥、素材视频、模型权重或虚拟环境加入仓库。

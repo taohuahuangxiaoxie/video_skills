@@ -19,6 +19,8 @@ def render():
              '| 人物表情、换装发型和身份一致 | [FACS本地规则](skills/higgsfield-prompt-writing/skills/higgsfield-facs/SKILL.md) · [换装经验](skills/higgsfield-prompt-writing/skills/higgsfield-facs/references/wardrobe-identity-performance.md) |',
              '| Seedance提示词 | [Prompt Master](skills/prompt-master/SKILL.md) → 按需补充[Seedance](skills/higgsfield-prompt-writing/skills/higgsfield-seedance/SKILL.md) |',
              '| H3提示词 | [Prompt Master](skills/prompt-master/SKILL.md) → [H3格式](skills/h3-prompt-writing/SKILL.md) |',
+             '| 武侠／仙侠人物创意与剧本 | [人物选择、钩子与情绪兑现](skills/wuxia-emotional-storytelling/SKILL.md) |',
+             '| 武侠／仙侠影像制作 | [唯美质感、机位表演与分段衔接](skills/wuxia-visual-direction/SKILL.md) |',
              '| 处理参考视频 | [24fps、等比低分辨率、无音轨](skills/video-reference-prep/SKILL.md) |',
              '| 处理生成视频 | [首1尾3帧与生成元数据清理](skills/generated-video-finish/SKILL.md) |',
              '| 生成深度参考 | [先预处理，再时序深度估计](skills/temporal-depth-reference/SKILL.md) |',
@@ -38,7 +40,7 @@ def render():
         lines.append(f'| [{name}]({f.relative_to(ROOT).as_posix()}) | {descriptions[name]} |')
     if discovered != set(descriptions): raise ValueError('Description catalog contains obsolete entries')
     lines += ['', '## 安装分组', '', '| 分组 | 包数 | 用途 |', '| --- | --- | --- |']
-    labels={'core':'提示词、表情和视频处理核心','h3':'核心加H3','creative':'核心加导演/广告/字幕','studio':'日常创作推荐组合','legacy':'旧模仿流程，自动补齐依赖','remote':'特定远程主机，另配连接环境','all':'全部技能包'}
+    labels={'core':'提示词、表情和视频处理核心','h3':'核心加H3','creative':'核心加导演/广告/字幕/武侠短片','studio':'日常创作推荐组合','wuxia':'武侠仙侠故事与影像制作','legacy':'旧模仿流程，自动补齐依赖','remote':'特定远程主机，另配连接环境','all':'全部技能包'}
     for name,members in manifest['profiles'].items():
         lines.append(f'| `{name}` | {len(members)} | {labels.get(name,name)} |')
     lines += ['', '表中分组包数为直接成员；选择单包或旧流程时，安装脚本还会补齐依赖。', '',

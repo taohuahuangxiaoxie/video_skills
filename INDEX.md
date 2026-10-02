@@ -1,6 +1,6 @@
 # 技能总索引
 
-本仓库包含 **14 个顶层技能包、47 个技能入口**。按任务选择技能；整包安装不表示每次加载全部技能。
+本仓库包含 **16 个顶层技能包、49 个技能入口**。按任务选择技能；整包安装不表示每次加载全部技能。
 
 [安装与使用](README.md) · [包依赖](docs/INVENTORY.md) · [运行环境](docs/DEPENDENCIES.md) · [个人默认规则](preferences/AGENTS.fragment.md)
 
@@ -12,6 +12,8 @@
 | 人物表情、换装发型和身份一致 | [FACS本地规则](skills/higgsfield-prompt-writing/skills/higgsfield-facs/SKILL.md) · [换装经验](skills/higgsfield-prompt-writing/skills/higgsfield-facs/references/wardrobe-identity-performance.md) |
 | Seedance提示词 | [Prompt Master](skills/prompt-master/SKILL.md) → 按需补充[Seedance](skills/higgsfield-prompt-writing/skills/higgsfield-seedance/SKILL.md) |
 | H3提示词 | [Prompt Master](skills/prompt-master/SKILL.md) → [H3格式](skills/h3-prompt-writing/SKILL.md) |
+| 武侠／仙侠人物创意与剧本 | [人物选择、钩子与情绪兑现](skills/wuxia-emotional-storytelling/SKILL.md) |
+| 武侠／仙侠影像制作 | [唯美质感、机位表演与分段衔接](skills/wuxia-visual-direction/SKILL.md) |
 | 处理参考视频 | [24fps、等比低分辨率、无音轨](skills/video-reference-prep/SKILL.md) |
 | 处理生成视频 | [首1尾3帧与生成元数据清理](skills/generated-video-finish/SKILL.md) |
 | 生成深度参考 | [先预处理，再时序深度估计](skills/temporal-depth-reference/SKILL.md) |
@@ -36,6 +38,8 @@
 | [music-video-subtitle-generator](skills/music-video-subtitle-generator/SKILL.md) | 音乐视频及歌词字幕 | 1 |
 | [h3-video-mimic](skills/h3-video-mimic/SKILL.md) | 旧模仿完整流程，仅显式调用 | 1 |
 | [comfyui-shanghai-remote](skills/comfyui-shanghai-remote/SKILL.md) | 特定远程主机运维，仅明确请求时调用 | 1 |
+| [wuxia-emotional-storytelling](skills/wuxia-emotional-storytelling/SKILL.md) | 武侠仙侠人物创意与剧本：钩子、人物选择和情绪兑现 | 1 |
+| [wuxia-visual-direction](skills/wuxia-visual-direction/SKILL.md) | 武侠仙侠影像制作：唯美质感、机位表演和可剪素材 | 1 |
 
 ## Higgsfield 子技能
 
@@ -83,11 +87,12 @@
 | --- | --- | --- |
 | `core` | 6 | 提示词、表情和视频处理核心 |
 | `h3` | 8 | 核心加H3 |
-| `creative` | 10 | 核心加导演/广告/字幕 |
-| `studio` | 12 | 日常创作推荐组合 |
+| `creative` | 12 | 核心加导演/广告/字幕/武侠短片 |
+| `studio` | 14 | 日常创作推荐组合 |
 | `legacy` | 1 | 旧模仿流程，自动补齐依赖 |
 | `remote` | 1 | 特定远程主机，另配连接环境 |
-| `all` | 14 | 全部技能包 |
+| `all` | 16 | 全部技能包 |
+| `wuxia` | 2 | 武侠仙侠故事与影像制作 |
 
 表中分组包数为直接成员；选择单包或旧流程时，安装脚本还会补齐依赖。
 

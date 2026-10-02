@@ -1,6 +1,6 @@
 # video_skills · 视频与人物创作技能库
 
-用于人物参考图、换装舞蹈、Seedance / H3 提示词和视频预处理的个人 skills 仓库。包含 **14 个顶层技能包、47 个技能入口**，支持整组迁移、按需安装、依赖补齐和冲突备份。
+用于人物参考图、换装舞蹈、Seedance / H3 提示词和视频预处理的个人 skills 仓库。包含 **16 个顶层技能包、49 个技能入口**，支持整组迁移、按需安装、依赖补齐和冲突备份。
 
 **导航：** [技能总索引](INDEX.md) · [包与依赖](docs/INVENTORY.md) · [运行环境](docs/DEPENDENCIES.md) · [个人默认规则](preferences/AGENTS.fragment.md) · [验证记录](docs/VALIDATION.md) · [来源与许可](THIRD_PARTY_NOTICES.md)
 
@@ -11,6 +11,8 @@
 | 细化图片、视频和舞蹈提示词 | [prompt-master](skills/prompt-master/SKILL.md) | 沿用指定模型、素材、时长、画幅和语言 |
 | 人物表情与多造型一致性 | [higgsfield-facs](skills/higgsfield-prompt-writing/skills/higgsfield-facs/SKILL.md) | 身份与发型分开；笑意自然起落，切镜不重置表情 |
 | H3 提示词 | [h3-prompt-writing](skills/h3-prompt-writing/SKILL.md) | 按实际输入模式转换，保留动作与节奏 |
+| 武侠／仙侠创意与剧本 | [wuxia-emotional-storytelling](skills/wuxia-emotional-storytelling/SKILL.md) | 人物选择串联钩子、情绪与结尾兑现 |
+| 武侠／仙侠影像制作 | [wuxia-visual-direction](skills/wuxia-visual-direction/SKILL.md) | 唯美质感、机位微表情、素材衔接；生成素材不含配乐 |
 | 处理参考视频 | [video-reference-prep](skills/video-reference-prep/SKILL.md) | 24fps、等比低分辨率、无音轨 |
 | 处理生成视频 | [generated-video-finish](skills/generated-video-finish/SKILL.md) | 首1尾3帧、清理生成元数据；保留尺寸、帧间隔和同步音频 |
 | 生成深度参考 | [temporal-depth-reference](skills/temporal-depth-reference/SKILL.md) | 先低分辨率24fps预处理，再真实时序深度估计 |
@@ -22,7 +24,7 @@
 
 ```text
 video_skills/
-├── skills/                         # 14个顶层技能包，保留各自资源与许可
+├── skills/                         # 16个顶层技能包，保留各自资源与许可
 │   ├── prompt-master/
 │   ├── higgsfield-prompt-writing/  # 父入口及33个子技能，保持相对目录
 │   ├── h3-prompt-writing/
@@ -35,7 +37,7 @@ video_skills/
 ├── scripts/build_index.py        # 生成或检查中文技能索引
 ├── docs/                         # 依赖、清单、验证及中文描述数据
 ├── manifest.json                 # 分组、依赖、技能文件SHA-256
-├── INDEX.md                      # 47个技能入口的中文索引
+├── INDEX.md                      # 49个技能入口的中文索引
 ├── AGENTS.md                     # 本源码仓库的维护约定
 └── THIRD_PARTY_NOTICES.md         # 保留上游作者与已有许可
 ```
@@ -60,11 +62,12 @@ python scripts/manage.py install --profile studio --with-rules --apply
 
 | 分组 | 顶层包数 | 适用范围 |
 | --- | --- | --- |
-| `studio` | 12 | 推荐日常创作：核心、H3、导演、广告和字幕 |
+| `studio` | 14 | 推荐日常创作：核心、H3、导演、广告、字幕和武侠短片 |
 | `core` | 6 | 提示词、表情、版权和三类视频处理 |
 | `h3` | 8 | 核心加H3提示词和容量经验 |
-| `creative` | 10 | 核心加导演、广告和字幕 |
-| `all` | 14 | 全部，含旧模仿流程和特定远程主机技能 |
+| `creative` | 12 | 核心加导演、广告、字幕和武侠短片 |
+| `all` | 16 | 全部，含旧模仿流程和特定远程主机技能 |
+| `wuxia` | 2 | 武侠／仙侠情绪故事与影像制作，可不安装通用创作包 |
 | `legacy` / `remote` | 1起 | 单独选择旧流程或远程技能，自动补齐所需依赖 |
 
 选择单个顶层技能包：

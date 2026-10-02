@@ -1,0 +1,6 @@
+interface:
+  display_name: "江湖人物情绪短片创作"
+  short_description: "围绕武侠仙侠人物选择，串联开篇钩子、意难平情绪与结尾兑现"
+  default_prompt: "使用 $wuxia-emotional-storytelling，把我的武侠或仙侠人物想法发展成短片创意与剧本，让开篇钩子、人物选择和结尾情绪相互呼应。"
+policy:
+  allow_implicit_invocation: true
