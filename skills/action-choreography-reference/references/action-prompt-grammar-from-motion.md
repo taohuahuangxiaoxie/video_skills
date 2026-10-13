@@ -186,4 +186,3 @@ When storing validated action assets, add these prompt-facing notes:
 - `end_state`
 - `connects_well_to`
 - `prompt_seed_sentence`
-

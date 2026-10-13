@@ -539,16 +539,16 @@
       "skill_entries": 1,
       "files": {
         "agents/openai.yaml": "6d5afa27dc3c391b6b28d2c716ec40eda1d716fbe7f4cb2ffd40631f7da8c19a",
-        "references/action-prompt-grammar-from-motion.md": "7f49e8c645e855492e65330328fc32263197ff4475ebad9136c50daaa101cd9b",
+        "references/action-prompt-grammar-from-motion.md": "07a70ae2a18084998bdf8b442bf79d9add72b97ef7769ba6f2468d5ebaf8e10b",
         "references/action-reference-map.md": "212e4f6bbadebbb8b9eb0d154d1316762c5984fbedaa74a095de2fa09dfb5c81",
         "references/combat-impact-state-progression.md": "94ec8b69fcd6a4589cdd4d9076321317393502e1f2fb6c97711ef4a3414d0341",
-        "references/contact-constraint-topology.md": "6f0aa8a5d3139afc69a9c12992cb679a32281bd95989d2290f38a96ded436876",
-        "references/exchange-response-logic.md": "5880c9ef3ea29681fd145fd547fe085dceb5874da3ded24751d90efbccc7c42c",
-        "references/fight-dramaturgy-and-payoff.md": "db3d5e0268fdd807d1343d8d8cc4306b3616f275c080fc5ac362c8228ef2fa56",
+        "references/contact-constraint-topology.md": "265c69c7c061e556aabf8457a7400e54ce29ffdc3ace427bb011985226a099ee",
+        "references/exchange-response-logic.md": "0acaceb35edb29383b4e1e4ba4acdf33f7d84622e1cb0106acada7554abc7603",
+        "references/fight-dramaturgy-and-payoff.md": "0c52b1743414fc366e71cb248becd2608f1226fb4f58bd28ca1ea55c0033cd84",
         "references/fight-system.md": "c1aa6cd322710ec84a33eb4cd99e3905d75d08b3a722cd866c56799bbab25c67",
         "references/full-body-locomotion-grounding.md": "57b72fc2bf6c5723f2ef5cfefd84a18d36c66b424c9ada1e1ef891e1accd52bd",
         "references/martial-arts-visual-mechanics.md": "b214135f49a643403e4707df30740ba7367436d9703fd0dacc2807d68b2a0327",
-        "references/weapon-body-dynamics.md": "73d70a398c982a6db28c5136db9f7ab77849a71e25bc266dc8eee5e4e9db9e67",
+        "references/weapon-body-dynamics.md": "51c7d948df715f13d10c1c6598100f5c484a54a849f8e1f99f1999e775497e97",
         "SKILL.md": "ad946ec85add16534324c848c937b11a4e1927a0563dbfdcf80c56044c1c73fc"
       }
     },

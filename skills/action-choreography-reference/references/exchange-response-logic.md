@@ -110,4 +110,3 @@ new distance / line / balance / initiative:
 - Active and support channels have legible jobs; they may switch without becoming random motion.
 - Every control point changes a relation and is converted, transferred, or released.
 - The final prompt contains natural action causality, not internal state labels or fixed quotas.
-

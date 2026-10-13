@@ -100,4 +100,3 @@ The final generation prompt should express this as visible action causality. Do 
 ## Source status
 
 Distilled from the user-provided 2026-07-20 text titled “打戏的「引擎」”. The source contained no paired footage, generation settings, or controlled A/B evidence. Its platform limits, numeric caps, and universal “iron rules” remain unverified and were not imported.
-

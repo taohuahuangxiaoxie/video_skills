@@ -383,14 +383,13 @@ The weapon is head-heavy relative to the fighter. A wide split stance and two-ha
 
 Mechanisms translated into cinematic controls:
 
-- Balance depends on the changing relation between whole-body center of mass and base of support; gait initiation deliberately perturbs that relation before stepping.  
+- Balance depends on the changing relation between whole-body center of mass and base of support; gait initiation deliberately perturbs that relation before stepping.
   https://pmc.ncbi.nlm.nih.gov/articles/PMC5696609/
-- Boxing studies connect punch performance with lower-limb force development and sequential acceleration/braking through the body.  
+- Boxing studies connect punch performance with lower-limb force development and sequential acceleration/braking through the body.
   https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.1099682/full
-- Bat studies show that rotational handling depends strongly on moment of inertia around the swing axis, not only total mass.  
+- Bat studies show that rotational handling depends strongly on moment of inertia around the swing axis, not only total mass.
   https://pubmed.ncbi.nlm.nih.gov/29651903/
-- Comparative roundhouse-kick research found shared movement components while disciplines differed in center-of-mass and segment-velocity patterns.  
+- Comparative roundhouse-kick research found shared movement components while disciplines differed in center-of-mass and segment-velocity patterns.
   https://doi.org/10.1371/journal.pone.0182645
-- Maximal hand-speed research found distinct contributions from trunk, shoulder, and elbow rather than one simultaneous rigid motion.  
+- Maximal hand-speed research found distinct contributions from trunk, shoulder, and elbow rather than one simultaneous rigid motion.
   https://pubmed.ncbi.nlm.nih.gov/19759324/
-

@@ -73,4 +73,3 @@ Use one or two decisive constraint relations per beat. Do not turn the final pro
 - a jump begins without takeoff or ends without landing compression;
 - a grip, bind, seat, or tether vanishes between frames with no release event;
 - camera movement fakes travel while the physical relation remains unchanged.
-
