@@ -50,3 +50,7 @@ python <技能目录>/temporal-depth-reference/scripts/make_depth.py input.mp4 -
 - `generated-video-finish` 和 `temporal-depth-reference` 依赖 `video-reference-prep` 的共享脚本，安装时必须保持同级目录；不要单独拷贝 SKILL.md。
 - Higgsfield 包保留相对结构。若只抽取 FACS 一个 SKILL.md，会丢失本轮表情参考和关联路由。
 - `wuxia` 分组包含人物情绪故事与影像制作两份文本技能，可独立于具体视频模型使用；建议成组安装以保留相互引用。进入提示词细化时按实际需求结合 Prompt Master、FACS 或模型专用技能，不要求安装生成引擎、素材或模型权重。
+
+## 武侠战争制作分组
+
+`wuxia-production`保留通用提示词、导演、人物表情、Seedance 2.5、动作物理、主镜机位、视听语言和武侠经验的相对依赖。文本设计不需要视频生成环境；真正生成由用户指定的平台或目标应用工具完成。部分上游技能提到额外专家技能，这些引用不等于该技能已随本仓库安装，缺失时使用已有规则完成当前范围或说明限制。

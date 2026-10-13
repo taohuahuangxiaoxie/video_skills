@@ -26,3 +26,14 @@
 2026-10-02新增两份自建武侠／仙侠技能，仅保存用户确认的故事设计和影像制作经验；不包含原著文本、人物素材、成片或账号分析数据。
 
 Higgsfield保留其字体说明与上游文档；本迁移包未启用或安装上游.git/.github/.claude中的开发自动化。
+
+## 2026-10-13 同步来源
+
+以下四包来自当前已安装版本，保留全文、作者信息及相关references；未从旧迁移包覆盖。它们当前均未附独立LICENSE，不推定统一再授权。
+
+- `action-choreography-reference`：安装记录来源 [snowfrost/skill-movie](https://github.com/snowfrost/skill-movie/tree/main/action-choreography-reference)，保留当前本地版本。
+- `cinematic-audiovisual-language`：当前已安装版本，资料来源见其 `references/source-map.md`；不臆造上游包地址。
+- `master-shot-camera-planning`：当前已安装版本，保留包内说明和测试记录；未确认独立上游包地址。
+- `seedance-2-5-fight-director`：[liyue-aigc/seedance-2-5-fight-director](https://github.com/liyue-aigc/seedance-2-5-fight-director)。
+
+`wuxia-visual-direction`同步本工程已确认的分区战场、动作与现场声规则。包内历史版本与验证状态说明原样保留，不把单次通过经验作为模型保证。

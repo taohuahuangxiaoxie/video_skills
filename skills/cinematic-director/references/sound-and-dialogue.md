@@ -164,9 +164,11 @@ Write away from:
 - Overlaps, interruptions, and trailing-off. There is no way to specify them inside one generation.
 - Numbers and proper nouns, if the model is also generating the voice.
 
-### The one-speaker-per-clip rule
+### Speaker planning and the single-speaker fallback
 
-One speaking face per generated clip, wherever the surface does not expose synchronized multi-speaker speech — check your target's `Dialogue + lip-sync` cell in the capability matrix of [ai-video-tool-adapters.md](ai-video-tool-adapters.md), which owns that reading, before you assume either way. Absent a confirmed multi-speaker feature, treat the rule as absolute.
+**Local Seedance preference, user-tested 2026-10-03:** use story rhythm and the requested duration to divide clips. Keep conversational turns, including multiple speakers in one clip and the same character speaking across clips. Repeat a canonical voice description verbatim per character; keep register, timbre, resonance, accent and diction stable, while writing emotional delivery separately. Do not require voice-reference media, extracted audio or dubbing, or delete/regroup lines merely to keep one voice in one generation. Clearly time and attribute each line and listening reaction. Only escalate to voice repair after an observed mismatch or at the user's request; textual consistency is the current working default, not a deterministic guarantee. This local preference overrides the single-speaker, word-count and dialogue-removal fallbacks below for these tasks.
+
+Use one speaking face per generated clip when the selected tool or observed result requires this fallback. Consult current capabilities and the user's tested workflow before applying older restrictions; the local Seedance preference above takes priority in its scope.
 
 Reasons, in order of how often they bite: sync systems bind one voice track to one detected face, so two faces produce either the wrong mouth moving or both mouths moving; a two-hander inside one clip has no cut point, because you cannot control where a cut falls inside a generation; and a second face doubles the identity-drift surface for no gain.
 
@@ -197,7 +199,7 @@ Strong prompt:
 MARA — woman, 34, short black hair, grey wool coat — stands camera-left, facing camera-right, and speaks one line: "You promised." She is the only person in frame. No other character, no other voice, no off-screen speech.
 ```
 
-Rules: a label is NAME plus three fixed physical anchors plus a screen position; reuse the identical anchor string in every prompt for that character (the canonical string is owned by [continuity-bible.md](continuity-bible.md)); name exactly one speaker per prompt; and state the negative explicitly — "only one person speaks" and "no other character in frame" — because silence about a second person is not the same as excluding one.
+Reuse fixed character identity anchors and screen positions (the canonical string is owned by [continuity-bible.md](continuity-bible.md)). Attribute every line to its speaker and identify who listens. In a dialogue exchange, specify one active speaker at a time without excluding the other character; use the single-person restrictions in the example only when making a deliberately single-speaker asset.
 
 ### When to abandon on-screen dialogue
 

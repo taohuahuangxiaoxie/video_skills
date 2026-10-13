@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "snapshot": "2026-09-29",
+  "snapshot": "2026-10-13",
   "profiles": {
     "core": [
       "prompt-master",
@@ -32,7 +32,11 @@
       "minimalist-product-ad-generator",
       "music-video-subtitle-generator",
       "wuxia-emotional-storytelling",
-      "wuxia-visual-direction"
+      "wuxia-visual-direction",
+      "action-choreography-reference",
+      "cinematic-audiovisual-language",
+      "master-shot-camera-planning",
+      "seedance-2-5-fight-director"
     ],
     "studio": [
       "prompt-master",
@@ -48,7 +52,11 @@
       "minimalist-product-ad-generator",
       "music-video-subtitle-generator",
       "wuxia-emotional-storytelling",
-      "wuxia-visual-direction"
+      "wuxia-visual-direction",
+      "action-choreography-reference",
+      "cinematic-audiovisual-language",
+      "master-shot-camera-planning",
+      "seedance-2-5-fight-director"
     ],
     "legacy": [
       "h3-video-mimic"
@@ -72,11 +80,27 @@
       "h3-video-mimic",
       "comfyui-shanghai-remote",
       "wuxia-emotional-storytelling",
-      "wuxia-visual-direction"
+      "wuxia-visual-direction",
+      "action-choreography-reference",
+      "cinematic-audiovisual-language",
+      "master-shot-camera-planning",
+      "seedance-2-5-fight-director"
     ],
     "wuxia": [
       "wuxia-emotional-storytelling",
       "wuxia-visual-direction"
+    ],
+    "wuxia-production": [
+      "prompt-master",
+      "higgsfield-prompt-writing",
+      "cinematic-director",
+      "wuxia-visual-direction",
+      "wuxia-emotional-storytelling",
+      "action-choreography-reference",
+      "cinematic-audiovisual-language",
+      "master-shot-camera-planning",
+      "seedance-2-5-fight-director",
+      "video-copyright-triage"
     ]
   },
   "packages": [
@@ -407,8 +431,8 @@
         "references/product-and-macro.md": "c6b791fe96db082517c8e3d639269228cee3ae68d55ddababbb7b09d967ca350",
         "references/production-workflow.md": "3f5e431b23931ae636d6637c92b63bc084407a1b4a8b1625fb5e9c393bb97998",
         "references/prompt-lexicon.md": "8e2172f9255dbc9ce51b7f54af9cb570283808a6ad4aa34fcf439c56c513138f",
-        "references/sound-and-dialogue.md": "fcc99cacf1bc35caf3dd5e9430a0f3c731b5b65868171cc488282559017d43de",
-        "SKILL.md": "9c32ff4d53764c0ae0bb43c845dff1551f21717a85b51902bca60f10fefa2571"
+        "references/sound-and-dialogue.md": "6d67813fc34142f164f06ea661c0ab4883389550bc1de068a0cc83f8fb06141f",
+        "SKILL.md": "cd710869f79fb3062d9de7713bc9e0bf3e7234ee0135b1c7b0cccd62a92d8469"
       }
     },
     {
@@ -502,7 +526,95 @@
       "skill_entries": 1,
       "files": {
         "agents/openai.yaml": "2b8d8c4dfd2d62fbed6cc73c387e206bbf613b7e4c1e397b7b9b1697b4de44b6",
-        "SKILL.md": "722e78879675d52551bae187aead4f7095ef32c99fac46e4c4c81087fe4832c0"
+        "references/battle-motion-sound.md": "7ecd83456e3b32f87fd2d9a11c5ff12e274d148156cde6546cb1deaaceb0d41f",
+        "references/battle-scene-reference.md": "552bb9c5e7c37e0eedf3a8353fd3af7bca0a5e38453c5f5d2af05eefd2d146e9",
+        "SKILL.md": "7b4ad8237271d68a47e6b4e56fe56e47147552a9c79d455502557c163e6b1d62"
+      }
+    },
+    {
+      "name": "action-choreography-reference",
+      "path": "skills/action-choreography-reference",
+      "role": "动作与武器物理、受力接触、群战衔接参考",
+      "dependencies": [],
+      "skill_entries": 1,
+      "files": {
+        "agents/openai.yaml": "6d5afa27dc3c391b6b28d2c716ec40eda1d716fbe7f4cb2ffd40631f7da8c19a",
+        "references/action-prompt-grammar-from-motion.md": "7f49e8c645e855492e65330328fc32263197ff4475ebad9136c50daaa101cd9b",
+        "references/action-reference-map.md": "212e4f6bbadebbb8b9eb0d154d1316762c5984fbedaa74a095de2fa09dfb5c81",
+        "references/combat-impact-state-progression.md": "94ec8b69fcd6a4589cdd4d9076321317393502e1f2fb6c97711ef4a3414d0341",
+        "references/contact-constraint-topology.md": "6f0aa8a5d3139afc69a9c12992cb679a32281bd95989d2290f38a96ded436876",
+        "references/exchange-response-logic.md": "5880c9ef3ea29681fd145fd547fe085dceb5874da3ded24751d90efbccc7c42c",
+        "references/fight-dramaturgy-and-payoff.md": "db3d5e0268fdd807d1343d8d8cc4306b3616f275c080fc5ac362c8228ef2fa56",
+        "references/fight-system.md": "c1aa6cd322710ec84a33eb4cd99e3905d75d08b3a722cd866c56799bbab25c67",
+        "references/full-body-locomotion-grounding.md": "57b72fc2bf6c5723f2ef5cfefd84a18d36c66b424c9ada1e1ef891e1accd52bd",
+        "references/martial-arts-visual-mechanics.md": "b214135f49a643403e4707df30740ba7367436d9703fd0dacc2807d68b2a0327",
+        "references/weapon-body-dynamics.md": "73d70a398c982a6db28c5136db9f7ab77849a71e25bc266dc8eee5e4e9db9e67",
+        "SKILL.md": "ad946ec85add16534324c848c937b11a4e1927a0563dbfdcf80c56044c1c73fc"
+      }
+    },
+    {
+      "name": "cinematic-audiovisual-language",
+      "path": "skills/cinematic-audiovisual-language",
+      "role": "影视镜头语法、连续性、运镜与声画节奏",
+      "dependencies": [
+        "action-choreography-reference"
+      ],
+      "skill_entries": 1,
+      "files": {
+        "agents/openai.yaml": "1346bc6440258bd478f26a77776840ddf080ad8b2f07997418a2fe9153fbc38e",
+        "references/ai-video-shot-planning.md": "ec9db432bda4a31a597db09b1095301dacfcb64e39d64d0c38ebc3d2bb5082c9",
+        "references/continuity-space-editing.md": "55926722dd98d179cd385422d59effaf1905dcb01cd4be5471a9c81ee441097d",
+        "references/shot-function-grammar.md": "20b501e95f1eda8703bf1444f9d876b4ed6303df6304b0f0d4325424c4650356",
+        "references/sound-rhythm.md": "31bd5b1246d782761ade13032f1ad73fe8d35c1b8390c8819a135452ec3fc62f",
+        "references/source-map.md": "9995a03a5da1c9529d4e7e90a1809fd3595a527c901c992529a15d4e2898e79a",
+        "references/staging-mise-en-scene.md": "fdebbc9b521d09df0723d3a6a478414fc95e74244e54de02a5de58c8f051747b",
+        "SKILL.md": "f6301e177d5a51b2c8554855698045c9126a2c474513a61a8078d426aa36f406"
+      }
+    },
+    {
+      "name": "master-shot-camera-planning",
+      "path": "skills/master-shot-camera-planning",
+      "role": "由关键画面反推空间关系、机位与切镜路线",
+      "dependencies": [
+        "cinematic-audiovisual-language"
+      ],
+      "skill_entries": 1,
+      "files": {
+        "agents/openai.yaml": "0d0a36dc717e8f91bc21bf1bab458a0ebc0b6258d3423b3926d3d64f60497c69",
+        "references/master-shot-decision-system.md": "b732a734d8ccbf022bcceb1b56fbf31fef6e3591a794f6d39a0695bb35dc532b",
+        "SKILL.md": "3e8546c61c08d9fd7f9c236c539d4a87aa0673975059fcc1da6a686b0d5b343e",
+        "test-prompts.json": "5adebb8922c687cede118fc97b97e964f4af390d83e6ea08138e07809636ab75",
+        "test-results.md": "db5827b6bcec3a93df3401b52a58cc1cb5374a8d7dd1c4ae69274b18f8bc8e21"
+      }
+    },
+    {
+      "name": "seedance-2-5-fight-director",
+      "path": "skills/seedance-2-5-fight-director",
+      "role": "Seedance 2.5 战斗剧本、动作波段与可执行提示词",
+      "dependencies": [
+        "action-choreography-reference",
+        "cinematic-audiovisual-language",
+        "higgsfield-prompt-writing"
+      ],
+      "skill_entries": 1,
+      "files": {
+        ".gitignore": "856d3fdd756775132bb6e1d2eb1661655915aee74acafceb3dddc731017e2b2d",
+        "agents/openai.yaml": "6a6bd2177063f093bae3f5bf696ebaee0afe8426c0375fb49ae5fcd9b82e50fc",
+        "README.md": "951695b829a6da886b758704f70f29e02088810a952ce0f72b228a95492c065c",
+        "references/core-engine.md": "6315937efd414de392aa00d169df8651208d90da269fd85de68382c523dbf802",
+        "references/diagnose.md": "cfb98a943a2ebc979575a40d790b82374cfe85cdb51b0456b67d47097509d37e",
+        "references/examples.md": "622f0976c722225a43157942fe2729b6ec531fd45b2bae6f290d19a8dd1494c2",
+        "references/fight-camera-library.md": "5416b99d80e059c93d90385cd869601d2043f6fe9777a3b32369c9bb617ba1f0",
+        "references/first-run-guide.md": "6c702acd677b0173b64d4186610194a8926de13d1c4796a00ef750616e11ac93",
+        "references/getting-started.md": "1609d967526703474c67dfec78ea414c0086ef61509c5bce0e0bdd7629253492",
+        "references/grammar-library.md": "f6fe7189ec3e12fa5135f30b0322d3ba6581a1a9238aac1b1fa2eea4ede4f332",
+        "references/presets.md": "1e4fc592f62968a39011900675f67abf686d27ee9a1fef9c1521ad55974ed351",
+        "references/scifi-combat-playbook.md": "92edf7a8b5631966e0c0f885cc63b529bd0aac05d531130b4f956098de86948b",
+        "references/seedance-adaptation.md": "abdbea71e021e9045453876fe0783bfb3167d2e21e33cba29a44b5acf66307c4",
+        "references/shared-core.md": "d38334bb906ef837f8eaf21fbc3a5382b220bd93a32c561af03f7aaa72a456e6",
+        "references/xianxia-guoman-playbook.md": "eba2e55fc1f9797b56e0ad9ea664938612b7d37885ef901d8d8feaa39d91e2b6",
+        "scripts/first_run.py": "ff3af41e066d4346dd989b0e0f91537416e256ea02d6fea97b062a5e66069422",
+        "SKILL.md": "34acac19b88f85ae05b9b7f995744543992d62ee6b08561be3b6e879781bcaa7"
       }
     }
   ],

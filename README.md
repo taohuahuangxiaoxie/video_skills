@@ -1,6 +1,6 @@
 # video_skills · 视频与人物创作技能库
 
-用于人物参考图、换装舞蹈、Seedance / H3 提示词和视频预处理的个人 skills 仓库。包含 **16 个顶层技能包、49 个技能入口**，支持整组迁移、按需安装、依赖补齐和冲突备份。
+用于人物参考图、换装舞蹈、Seedance / H3 提示词和视频预处理的个人 skills 仓库。包含 **20 个顶层技能包、53 个技能入口**，支持整组迁移、按需安装、依赖补齐和冲突备份。
 
 **导航：** [技能总索引](INDEX.md) · [包与依赖](docs/INVENTORY.md) · [运行环境](docs/DEPENDENCIES.md) · [个人默认规则](preferences/AGENTS.fragment.md) · [验证记录](docs/VALIDATION.md) · [来源与许可](THIRD_PARTY_NOTICES.md)
 
@@ -24,7 +24,7 @@
 
 ```text
 video_skills/
-├── skills/                         # 16个顶层技能包，保留各自资源与许可
+├── skills/                         # 20个顶层技能包，保留各自资源与许可
 │   ├── prompt-master/
 │   ├── higgsfield-prompt-writing/  # 父入口及33个子技能，保持相对目录
 │   ├── h3-prompt-writing/
@@ -37,7 +37,7 @@ video_skills/
 ├── scripts/build_index.py        # 生成或检查中文技能索引
 ├── docs/                         # 依赖、清单、验证及中文描述数据
 ├── manifest.json                 # 分组、依赖、技能文件SHA-256
-├── INDEX.md                      # 49个技能入口的中文索引
+├── INDEX.md                      # 53个技能入口的中文索引
 ├── AGENTS.md                     # 本源码仓库的维护约定
 └── THIRD_PARTY_NOTICES.md         # 保留上游作者与已有许可
 ```
@@ -62,12 +62,13 @@ python scripts/manage.py install --profile studio --with-rules --apply
 
 | 分组 | 顶层包数 | 适用范围 |
 | --- | --- | --- |
-| `studio` | 14 | 推荐日常创作：核心、H3、导演、广告、字幕和武侠短片 |
+| `studio` | 18 | 推荐日常创作：核心、H3、导演、广告、字幕和武侠短片 |
 | `core` | 6 | 提示词、表情、版权和三类视频处理 |
 | `h3` | 8 | 核心加H3提示词和容量经验 |
-| `creative` | 12 | 核心加导演、广告、字幕和武侠短片 |
-| `all` | 16 | 全部，含旧模仿流程和特定远程主机技能 |
+| `creative` | 16 | 核心加导演、广告、字幕和武侠短片 |
+| `all` | 20 | 全部，含旧模仿流程和特定远程主机技能 |
 | `wuxia` | 2 | 武侠／仙侠情绪故事与影像制作，可不安装通用创作包 |
+| `wuxia-production` | 10 | 郭靖等武侠战争项目：导演、动作物理、主镜机位、Seedance 2.5 和版权诊断 |
 | `legacy` / `remote` | 1起 | 单独选择旧流程或远程技能，自动补齐所需依赖 |
 
 选择单个顶层技能包：
@@ -104,3 +105,9 @@ git diff --check
 本轮发型与表情规则集中在[换装身份与表情参考](skills/higgsfield-prompt-writing/skills/higgsfield-facs/references/wardrobe-identity-performance.md)，并接入FACS、Soul、Prompt Master及个人触发规则。编辑旧提示词时需替换“全程微笑、持续露齿”等冲突句。
 
 本仓库保留混合来源的原作者与许可，不作统一重新授权；具体见[来源与许可](THIRD_PARTY_NOTICES.md)。文件清单校验验证复制完整性，不能代替目标机器依赖配置及实际画面验收。
+
+## 武侠战争制作同步（2026-10-13）
+
+补入动作物理、视听语言、主镜机位和 Seedance 2.5 战斗导演四个包；武侠视觉技能同步分簇战场、自然光遮挡、高速动作、现场声音及撞击后物理经验。保留既有角色声线连续性更新。推荐此类项目使用 `wuxia-production` 分组，安装方法同上，将 `--profile studio` 改为 `--profile wuxia-production`。
+
+这里只保存技能源码和通用经验。项目参考图、参考视频、任务摘要另行迁移；不把生成视频、个人项目日志、账号或素材打入 Git。

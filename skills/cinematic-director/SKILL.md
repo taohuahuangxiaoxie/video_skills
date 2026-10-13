@@ -280,7 +280,7 @@ If a style lens is active, take its `camera`, `ai_video` and `negative_prompt_ad
 
 Sound is a directing decision, and in AI film it is the cheapest continuity glue available — one continuous ambience bed under a sequence hides an enormous amount of visual drift.
 
-Plan five layers per shot: room tone, ambience, foley, spot effects, score. For dialogue, respect the one-speaker-per-clip rule, label speakers unambiguously, and convert what cannot be generated into voice-over, off-screen line, or reaction-only. Template: `assets/sound-plan-template.md`. Depth: `references/sound-and-dialogue.md`.
+Plan the requested sound layers: room tone, ambience, foley, spot effects, and score only when permitted. Label each speaker and listener unambiguously. Use single-speaker clips only where the selected tool or observed output requires them, not as a universal dialogue rule. Local Seedance preference (user-tested, 2026-10-03): divide clips for story rhythm, allow dialogue exchanges and recurring voices across clips, and repeat each character's voice description verbatim, with delivery/emotion described separately. Do not regroup or remove dialogue for voice consistency, or require audio/video voice references or dubbing by default; consider repairs only after an observed mismatch or at the user's request. Template: `assets/sound-plan-template.md`. Depth: `references/sound-and-dialogue.md`.
 
 ### 12. Edit and assembly plan
 
