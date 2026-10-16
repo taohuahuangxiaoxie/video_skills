@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "snapshot": "2026-10-13",
+  "snapshot": "2026-10-16",
   "profiles": {
     "core": [
       "prompt-master",
@@ -526,9 +526,10 @@
       "skill_entries": 1,
       "files": {
         "agents/openai.yaml": "2b8d8c4dfd2d62fbed6cc73c387e206bbf613b7e4c1e397b7b9b1697b4de44b6",
-        "references/battle-motion-sound.md": "7ecd83456e3b32f87fd2d9a11c5ff12e274d148156cde6546cb1deaaceb0d41f",
+        "references/battle-motion-sound.md": "49068ba7cd83e614c0f3738d2185d5c51126a2d9bb9dec7ddfdcc381a7d5a2d7",
         "references/battle-scene-reference.md": "552bb9c5e7c37e0eedf3a8353fd3af7bca0a5e38453c5f5d2af05eefd2d146e9",
-        "SKILL.md": "7b4ad8237271d68a47e6b4e56fe56e47147552a9c79d455502557c163e6b1d62"
+        "references/fast-wuxia-combat.md": "387fe62c623f25fba8bf388acc099a6ac05438fcaac58eb4c5753d66f3878ad4",
+        "SKILL.md": "0564206d0c1d24781d0ccee6f6e3d7ea31819a3e6c3a536061261c4e63e1fb6c"
       }
     },
     {
@@ -602,7 +603,7 @@
         "agents/openai.yaml": "6a6bd2177063f093bae3f5bf696ebaee0afe8426c0375fb49ae5fcd9b82e50fc",
         "README.md": "951695b829a6da886b758704f70f29e02088810a952ce0f72b228a95492c065c",
         "references/core-engine.md": "6315937efd414de392aa00d169df8651208d90da269fd85de68382c523dbf802",
-        "references/diagnose.md": "cfb98a943a2ebc979575a40d790b82374cfe85cdb51b0456b67d47097509d37e",
+        "references/diagnose.md": "33fd4a2c9e0190ffd60c29c874a8a68b4ffd7cd947962b53b45bfb63efca1ef7",
         "references/examples.md": "622f0976c722225a43157942fe2729b6ec531fd45b2bae6f290d19a8dd1494c2",
         "references/fight-camera-library.md": "5416b99d80e059c93d90385cd869601d2043f6fe9777a3b32369c9bb617ba1f0",
         "references/first-run-guide.md": "6c702acd677b0173b64d4186610194a8926de13d1c4796a00ef750616e11ac93",
@@ -629,5 +630,5 @@
     ".claude",
     "Python caches"
   ],
-  "updated_at": "2026-10-02"
+  "updated_at": "2026-10-16"
 }
