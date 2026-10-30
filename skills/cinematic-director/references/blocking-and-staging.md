@@ -312,13 +312,23 @@ Plain English, which is what goes in the shot plan:
 4. Both start in profile at personal distance; B closes 0.8 m over three seconds. A never moves a foot, holds the gaze for 2.5 s, then drops it to the floor. B paid for the beat with a step, but A lost it with the eyeline, not with the feet — stillness only holds power while the look holds too.
 5. Two people face us from opposite thirds; a third walks in from the background and takes the gap between them, looking at the lens. The wedge. The pair's shared thing is over.
 
+## Dialogue coverage during action
+
+When speech shares a beat with action, decide what the audience needs to read. Continue a motivated action through the line when its body mechanics matter; cut to a frontal or three-quarter close-up when the delivery or realization matters. Preserve the approved words and action order. Do not default to a full-body pose that freezes until the sentence ends, or add unrelated gestures merely to fill the time.
+
+For example, an already-scripted draw and challenge can be covered as the draw flows into a torso turn, a close-up carries the challenge, and a wider shot catches the next committed movement. These are coverage choices, not permission to add a draw, a challenge or an attack to a different script. Use one dominant movement per shot; a camera move should reveal scale, pressure or a reaction rather than substitute for performance.
+
+Environment motion should have the same cause as the action: a pressure pulse lifts a coat edge and drives nearby dust outward; reflected light travels with the emitting object. Breathing and hair drift alone do not repair a missing primary action. Deliberate stillness remains valid when it serves the beat.
+
+World geography is distinct from frame composition. Keeping A west of B does not require every shot to show A at the left edge and B at the right. Use axis-consistent singles, reverse coverage, detail, reaction or a wider view according to the beat. Retain eyelines and screen direction, and establish a new axis when it changes; follow [cinematic-language.md](cinematic-language.md). Do not add overheads, orbits or cuts just to meet a variety quota.
+
 ## Blocking for AI video
 
 Reliable — write these directly, no hedging:
 
 | Motion | Grade | How to write it |
 |---|---|---|
-| Breathing, chest and shoulder rise | High | "his chest rises and falls slowly" — always include; it is what stops a clip reading as a still |
+| Breathing, chest and shoulder rise | High | "his chest rises and falls slowly" when it suits the performance; a supporting cue, not a replacement for the primary action |
 | Garment settle, hair drift, ambient cloth | High | Name the fabric and the cause: "the coat hem lifts in the doorway draught" |
 | Head turn ≤ 45° | High | State degrees and duration: "turns her head 30° to the left over 1.5 seconds" |
 | Head lower / lift | High | Best single-beat emotional move in AI video. Pair it with an eyeline change. |

@@ -118,7 +118,7 @@
         "README.md": "78ac7daf8bac2161923188d9ad92249ad11aa565fbbc64b995f3bf4cfa03af2b",
         "references/patterns.md": "246073097e63aec5dc5598c04eb74d313275984582594acb6322726793e80bd3",
         "references/templates.md": "5a678b8e20ec05daad4fd289a2d5cafedffa71b75adbde0a1900c8891267332c",
-        "SKILL.md": "19a0535f2d2b11eb87d1e7da3678038c7f92dc5c4ae637d4258de6f1261313c2"
+        "SKILL.md": "9b5871722ac89d1c9e51b29fd9da78aaef42d6a0fae1abbb4821362699fb5024"
       }
     },
     {
@@ -214,7 +214,7 @@
         "skills/higgsfield-seedance/PRODUCTION-PATTERNS.md": "a43f2e1e5cfa859a7496b2f480bd6aa9a8206dc580725edfb47035a18a93d000",
         "skills/higgsfield-seedance/SKILL.md": "a40392212cd6e37ee4b533524f9cc9f1023a8de9579e66e07b33940739b23b8b",
         "skills/higgsfield-seedance-2-5/MODE-PLAYBOOKS.md": "d879732b7b786e5870123dfb15c34932a393601273addf68c513a227258dd3ac",
-        "skills/higgsfield-seedance-2-5/SKILL.md": "9d61bac333240d36e13116c3981b4bf3bddb9aa0480bfa30c00298f2d446b86f",
+        "skills/higgsfield-seedance-2-5/SKILL.md": "caa1b464c569ba8cd27c4231eaa6dc97762d7a844f35503309056608ca699e9d",
         "skills/higgsfield-seedance-2-5/VFX-PIPELINE.md": "dfa8a466063b9a10a989abafb850ff031947fdeba6fdc62744a21fe8f5ba3af6",
         "skills/higgsfield-seedance-vfx/references/dialogue-timing.md": "e6ed368412af4b56badc93b1302a7e6b88c2e9937f65f95a5eb7aa59830b9389",
         "skills/higgsfield-seedance-vfx/references/first-frame.md": "28ca68c37a4a79b6ac0889477036e59990a654ce2bf11d6a89e5da3306e5ce8c",
@@ -398,9 +398,9 @@
         "LICENSE": "df731ea2e1ffd3b8890ad246da3df96ceba3301c16fb4970c16811df4c728b56",
         "README.md": "de61800434c2ff91cb5aff1b86d35d542b70d3b64716ecb09c1fa8322b9c1fd9",
         "references/ai-video-tool-adapters.md": "4fec32bd0dbe95a87af84f6319c428af1f58f0e266e42f907e2dfc51edbe7334",
-        "references/blocking-and-staging.md": "16203dd654d61459df6eabb7754d5b450a17774ad18484f27a1c05e73d392402",
+        "references/blocking-and-staging.md": "58b663e9a1e28a62d6677ec7a814a82585478987a02162bbf2bcf4787e8ea58f",
         "references/cinematic-language.md": "2e899733fdefb12d316faeeaed1a5dc466dea55ef3818b28e7cec13d7a501933",
-        "references/continuity-bible.md": "92aad85488aee0fcad6d432ce29f66286d66245bb2a17499a325afb356c74826",
+        "references/continuity-bible.md": "f2f7d15a581e6cf858c887f122c8f3ed343203ab4bc9bbeee97c64d7ad55fb25",
         "references/director_styles/01_spielberg.md": "c1d8db44ae145e3a5bc1791967afb2d02a9f838ae5691dbbe47d006b754d7783",
         "references/director_styles/02_hitchcock.md": "fcd7952d7c1970ed9b477d1d8ac3c03b3c3c956d4fc057dfb2a061a8a180b4a8",
         "references/director_styles/03_kubrick.md": "fb63f95a6e0467cac92c7a876bf5d371d844ac60bee160280cbf94f895f32117",
@@ -424,6 +424,7 @@
         "references/director_styles/example_comparisons.md": "d13bd746f88418fdf259b25115b6cab4d259ba31ef6d57f251fdeeaddebc9504",
         "references/director_styles/README.md": "fcd5fc6193e0b86765be168af4cb43ee30bd1cb805ceb5bcc27241dbcd2d1798",
         "references/editing-and-assembly.md": "8256bb843e8d45ba66aba927edef30cd586a0a32030e4a4639d26be156e850de",
+        "references/effects-state-and-impact.md": "ce012620d2f8add847f52c029fed7fbc6257434641bdae05917f52ffd5024198",
         "references/failure-modes.md": "9a374e78ac8257ed8c91d7c247ebc2f1d27a3484b0c1486fee7d77e554fb9be7",
         "references/genre-playbooks.md": "5713431b20dcd6c4804d086385106ecce9ef483210287dfdceacc351077d33e1",
         "references/image-model-adapters.md": "307f429a66ce7ae2c4f4e7d6893e59b8017549dd12d944c2a1aefd605b2f543a",
@@ -432,7 +433,7 @@
         "references/production-workflow.md": "3f5e431b23931ae636d6637c92b63bc084407a1b4a8b1625fb5e9c393bb97998",
         "references/prompt-lexicon.md": "8e2172f9255dbc9ce51b7f54af9cb570283808a6ad4aa34fcf439c56c513138f",
         "references/sound-and-dialogue.md": "6d67813fc34142f164f06ea661c0ab4883389550bc1de068a0cc83f8fb06141f",
-        "SKILL.md": "cd710869f79fb3062d9de7713bc9e0bf3e7234ee0135b1c7b0cccd62a92d8469"
+        "SKILL.md": "f7047ffa72e966525f309ce42617acbc0e52b2324f15f9102fd5702fef609d9f"
       }
     },
     {
@@ -630,5 +631,5 @@
     ".claude",
     "Python caches"
   ],
-  "updated_at": "2026-10-16"
+  "updated_at": "2026-10-30"
 }

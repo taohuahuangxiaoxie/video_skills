@@ -8,7 +8,7 @@ description: >-
   operation, model/pricing/account support, media editing, or general film discussion.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.1.1"
   author: "wangzhang-wu"
 ---
 
@@ -22,6 +22,8 @@ metadata:
 - If the request combines prompt writing with execution, apply this skill only to the prompt-writing portion and leave execution to the user or a separately authorized workflow.
 
 ## Operating stance
+
+For an approved script, direct the requested section rather than redeveloping it. Read its current source and incoming state; preserve event order, exact approved dialogue, reveal timing and action/effect phases unless the user explicitly changes them. Refining coverage or lighting does not reopen the story. Existing approved beats replace fresh breakdown/beat invention in Steps 2–3; the user's requested scope still determines which later steps run.
 
 Act as a working director and previs supervisor, not a critic and not a prompt decorator. The job is to turn source material into a plan someone could actually execute — with a camera crew or with a generation queue.
 
@@ -56,6 +58,7 @@ Load *parts* of files, not whole files. The four largest references — `failure
 | Image/keyframe/storyboard-panel prompts | E | `assets/keyframe-prompt-template.md`, `references/image-model-adapters.md`, `assets/qc-checklist.md` — Gate 1 is a hard gate on this step |
 | Video motion prompts from existing images | F | `assets/video-prompt-template.md`, `references/prompt-lexicon.md`, `references/ai-video-tool-adapters.md` |
 | Recurring characters/locations across shots | G | `references/continuity-bible.md` |
+| Effects reset, disappear or lose intensity across cuts; luminous effects or impact design | F/G/J | `references/effects-state-and-impact.md`; for speaking characters that freeze, also the dialogue coverage section of `references/blocking-and-staging.md` |
 | Sound design, music, dialogue, voice-over | H | `assets/sound-plan-template.md`, `references/sound-and-dialogue.md` |
 | "I have clips — how do I cut them together?" | I | `assets/edit-timeline-template.md`, `references/editing-and-assembly.md` |
 | "It failed / looks like a slideshow / face changed" | J | `references/failure-modes.md` — for a single named symptom read only its symptom-to-code index and that one code, then stop |
@@ -135,7 +138,7 @@ Defaults when unspecified:
 
 1. **Story function first.** A shot with no story function is deleted, not improved.
 2. **Blocking before framing.** Decide what bodies do in space, then place the camera. A well-blocked scene reads even shot flat.
-3. **One dominant camera move and one primary action per clip.** No move at all is a legitimate choice and often the better one. Unrelated actions stacked into one clip is the same defect from the other side — the motion budget is owned by `references/ai-video-tool-adapters.md`.
+3. **One dominant camera move and one primary action per shot.** In a supported multi-shot clip, apply this to each shot rather than flattening the whole clip into one setup. No move at all is a legitimate choice and often the better one. Unrelated actions stacked into one shot is the same defect from the other side — the motion budget is owned by `references/ai-video-tool-adapters.md`.
 4. **Every action has an end state.** "He turns" is not a shot. "He turns until his profile is against the window, then stops" is.
 5. **Behavior, not emotion.** Never prompt "he is afraid." Prompt what fear looks like on a body.
 6. **Continuity is engineered.** Name the invariants — identity, wardrobe, light direction, era, geography — and repeat them verbatim across every prompt in a scene.
@@ -237,7 +240,7 @@ Video-to-video — restyle, relight, regrade, reframe, or transfer a performance
 
 ```text
 [Camera behavior]. [Subject starts in visible state], then [one primary action with pace and direction].
-[Environment reacts subtly]. End with [clear final pose/composition].
+[Environment reacts at the intensity established for this beat]. End with [clear final pose/composition].
 Maintain [identity / costume / location / light direction]. Avoid [failure modes matching this shot's risk].
 ```
 
@@ -266,9 +269,10 @@ Overall: [theme, tone, character and setting continuity rules]
 [00:03-00:06] Shot 2: [size/angle]. [action]. Camera [move]. [light or sound cue]
 ```
 
-Per-segment lines carry action, camera, and at most one light or sound cue. Identity, wardrobe,
-palette and lighting facts live in the `Overall:` block and are never restated in a segment — one
-re-description and the model recasts the character. No emotion word goes in a segment either: hard
+Per-segment lines carry action, camera, and the changing light or sound cue. Identity, wardrobe,
+palette and fixed lighting facts live in the `Overall:` block. Effect phases and their lighting
+changes belong in the relevant segment, with the continuing state explicit across cuts; see
+`references/effects-state-and-impact.md`. Do not redesign identity while restating continuity. No emotion word goes in a segment either: hard
 rule 5 applies inside S4 exactly as it does everywhere else, and an emotion adjective here is the
 fastest way to get a generic performance in every segment at once.
 

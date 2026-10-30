@@ -294,7 +294,9 @@ Seed rules, in order of how much they buy you. Change the seed only when you hav
 
 ## State-change ledger
 
-The ledger is the working half of the bible. One row per shot, written *before* generation, corrected after approval. The discipline it enforces: every tracked state moves at most one band between adjacent shots. A progression that jumps two bands reads as a missing shot, and a progression that runs backwards reads as a different day.
+The ledger is the working half of the bible. For prompt planning, use one row per relevant shot and carry its exit state into the next entry state. In continuous action, an unexplained jump or reset reads as missing action. A scripted time jump, burst, discharge or recovery may change several bands at once; name its cause rather than imposing a universal one-band limit. This is a description of story states, not authorization to run generations or maintain a production log.
+
+For persistent VFX, track phase, spatial anchor, scale, intensity, moving components and the event that ends the effect. A cut or a new generated segment is not such an event. Use [effects-state-and-impact.md](effects-state-and-impact.md) for the compact state row and the distinction between a persistent structure and energy moving through it.
 
 | Shot | What changed inside this shot | Carries into next as | Verify in next shot |
 |---|---|---|---|

@@ -1,6 +1,6 @@
 ---
 name: prompt-master
-version: 1.8.0
+version: 1.8.1
 description: Generates optimized prompts for AI tools. Activates only when the user explicitly asks to write, fix, improve, or adapt a prompt for a specific AI tool (LLM, Cursor, Midjourney, image AI, video AI, coding agents, etc.). Does not activate for general conversation, coding tasks, document writing, or other non-prompt-engineering work.
 ---
 
@@ -60,6 +60,15 @@ Before writing any prompt, silently extract these 9 dimensions. Missing critical
 | **Examples** | Desired input/output pairs for pattern lock | If format-critical |
 
 ---
+
+### Approved scripts: production instead of redevelopment
+
+When the user asks to continue an approved script, make the next segment, or repair its prompt, treat the task as production of that source. Creative expansion remains appropriate for an initial idea or an explicitly requested rewrite.
+
+- Read the current approved source section and the adjacent segment's exit state. Use summaries to locate the source, not to reconstruct exact dialogue. Check which assets and revisions were accepted or rejected.
+- Preserve event order, dialogue in its approved language, reveal timing, action and effect phases, and the user's model, duration and aspect ratio. Keep existing shot IDs when present. Camera, lighting and performance detail may be refined within the requested scope; “improve the camera” does not authorize new story beats or rewritten lines.
+- Apply later explicit user changes within their scope without asking for approval again. If the source conflicts with those changes, identify the affected portion; update the canonical text only when that edit is authorized. If essential source text cannot be recovered, report the gap instead of claiming an invented reconstruction is exact.
+- Before handoff, compare the prompt with the approved section for omitted, added, reordered or rewritten content and accidental state resets. Do not impose a master-script file or approval stage on a one-off prompt.
 
 ### Human-expression and rejection routing (local preference, 2026-09-29)
 

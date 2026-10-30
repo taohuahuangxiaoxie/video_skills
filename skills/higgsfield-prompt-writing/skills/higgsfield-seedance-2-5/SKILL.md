@@ -4,12 +4,14 @@ description: "Seedance 2.5 prompt director — the omni-reference dialect. Route
 user-invocable: true
 metadata:
   tags: [higgsfield, seedance, seedance-2.5, dreamina, jimeng, omni-reference, video-edit, video-extension, multi-reference, long-video, keyframes, storyboard, blockout, transitions]
-  version: 1.4.0
-  updated: 2026-08-22
+  version: 1.4.1
+  updated: 2026-10-30
   parent: higgsfield
 ---
 
 # Higgsfield Seedance 2.5 Director
+
+**Approved-script production (local directing rule).** When continuing or repairing an approved sequence, read the current source section and its incoming state before adapting it. Keep approved dialogue, event order, reveal timing and action/effect phases, along with the user's model, duration and format. Camera refinement does not reopen the story. Later explicit user changes apply within their scope. This takes precedence over generic staging or splitting suggestions below.
 
 Seedance 2.5 is a **different dialect from Seedance 2.0**, not a version bump you can
 prompt through by habit. 2.0 is a reference-driven shot generator with start/end frames
@@ -338,6 +340,10 @@ Keep <character identity, number of characters, clothing, prop ownership, spatia
 and audio relationships> consistent.
 ```
 
+### Effects across stages (local directing rule)
+
+Put the already-reached effect phase in the stage's initial state, the intended change in its primary event, and the surviving effect in its end state. A new stage or camera angle does not restart a completed charge. Distinguish the persistent structure from internal flows and released energy: for example, the outer ring holds position and diameter while only its inner streams feed the departing pulse. State the event that ends the ring; cropping it in a close-up is not that event. At an established peak, carry forward the visible scale, light spill and environmental response rather than returning to sparse sparks. These are design constraints to verify in output, not guaranteed model controls.
+
 ### Split by JOB, not only by length
 
 Staging solves *too many events in one paragraph*. It does not solve **two
@@ -351,12 +357,12 @@ held — badly, in both directions at once: *"the fight gets softer, the faces g
 flatter."* The model spends its attention budget once. Asked to nail physics
 and micro-performance in one generation, it half-does each.
 
-Split into **two prompts, one job each, stitched in the edit**:
+Consider **two prompts, one job each, stitched in the edit**, when the competing jobs cannot read within the requested format. This tutorial is not a blanket ban on speaking during action. For an approved combined clip, first give each shot a dominant job: motivated movement can continue under a line, or a close-up can carry its delivery before the action resumes. Keep the approved words and event order; do not silently change the requested clip count or duration.
 
 | Cut it here | Because |
 |---|---|
 | **physics ↔ performance** | mass, contact and follow-through vs. eyes, breath and micro-expression. Different attention, different optics, usually different shot sizes |
-| **action ↔ dialogue** | the same split wearing other clothes |
+| **complex contact action ↔ detailed dialogue performance** | separate coverage may help; a line over a simple turn or committed movement does not automatically require a separate generation |
 | **the beat that needs room** | the second reported case: a 30s carnival scene *held* as one prompt, and was still split into 3×15s because the first-touch beat needed room — *"these beats felt completely rushed"*. Length was not the constraint; **pacing** was |
 
 **How to tell which cut you need.** Length-driven splits are decided by
@@ -369,10 +375,9 @@ Note the direction of the second case: it fit, and was split anyway. "It
 generated" is not the bar — a scene that renders every beat but rushes the one
 that matters has failed at the thing you were making it for.
 
-Practical consequence, stated plainly by the same production: **a perfect 30s
-render does not exist.** Generate raw footage per job, then assemble. Several
-of the finished scenes in that film take the background from one take and the
-foreground action from another.
+That production used footage assembled per job, sometimes taking the background
+from one take and foreground action from another. Treat this as a repair option
+for an observed conflict, not proof that every combined long clip must be split.
 
 ### Timestamps and pacing
 
