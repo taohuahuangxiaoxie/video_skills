@@ -23,3 +23,13 @@ Desktop.ini
 .vscode/
 *.log
 *.tmp
+
+# Official Xiaoyunque skills and runtime are online-installed dependencies.
+xyq-skill/
+xyq-nest-skill/
+xyq-short-drama-skill/
+xyq-marketing-skill/
+pippit-tool-cli
+pippit-tool-cli.exe
+.pippit_tool_cli/
+pippit-cli/

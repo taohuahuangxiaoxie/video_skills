@@ -2,10 +2,11 @@
 
 快速浏览用途和技能入口，请看[技能总索引](../INDEX.md)。
 
-本仓库有20个顶层安装包，Higgsfield保留33个子技能，共53个SKILL.md。
+本仓库有21个顶层安装包，Higgsfield保留33个子技能，共54个SKILL.md。
 
 | 安装包 | 用途 | 直接依赖 | 入口数 |
 | --- | --- | --- | --- |
+| xyq-project-workflow | 小云雀项目默认、官方在线依赖与提交恢复交付 | prompt-master；官方 CLI/xyq-skill 为外部运行依赖 | 1 |
 | prompt-master | 提示词细化入口 | higgsfield-prompt-writing, video-copyright-triage | 1 |
 | higgsfield-prompt-writing | 表情、身份、摄影、Seedance 与相关子技能；保留完整依赖 | 无本包硬依赖 | 34 |
 | video-reference-prep | 参考视频：24fps、低分辨率、无音轨 | 无本包硬依赖 | 1 |
@@ -30,3 +31,5 @@
 `wuxia-production`适用于武侠战争和Seedance 2.5制作；`studio`用于日常多类型创作。技能内部提及但未随包提供的其他专家技能按实际安装情况使用，不应声称已安装。
 
 系统/插件内置的imagegen等工具由目标应用提供。这里只迁移技能源码，不含账号、素材、模型或生成权限。
+
+小云雀官方技能及 CLI 不属于本表的安装包；只登记在线来源，不复制官方内容。

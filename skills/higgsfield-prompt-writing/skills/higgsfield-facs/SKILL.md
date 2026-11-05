@@ -24,6 +24,7 @@ Automatically apply this expression layer when generating/editing a person image
 - Depth references provide motion and head orientation, not recoverable fine expression. Images and the prompt supply expression. Transfer color-reference expression when requested and keep identity separate; do not replace that requested performance with a generic smile arc.
 - Reuse accepted faces. Expression-only edits affect needed mouth/cheek/eye soft tissue, not bone structure; avoid repeated remodeling to enlarge a smile. Hair edits preserve the face and plausible natural hairline.
 - For multi-look images or constant-smile feedback, read [wardrobe identity and performance](references/wardrobe-identity-performance.md). AU grids and paid multi-variant tests are optional, never prerequisites. This is empirical prompt guidance, not deterministic muscle control.
+- For continuous dialogue/emotional acting, anime expressions translated into live action, or incorrect age from a style reference, read [performance continuity and perceived age](references/performance-continuity.md). Preserve the observed beat order and listening reactions; keep style, identity, age and current emotion separate. A new scene need not inherit the previous scene's sadness.
 
 The detailed FACS vocabulary and specialist examples below are available when fine acting requires them. They do not override these compact everyday defaults or the user's chosen model.
 

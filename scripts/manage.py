@@ -5,11 +5,55 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- comfyui-skills:begin -->'
 END = '<!-- comfyui-skills:end -->'
+OFFICIAL_XYQ_SKILLS = frozenset({'xyq-skill', 'xyq-short-drama-skill', 'xyq-marketing-skill'})
+OFFICIAL_XYQ_DIRS = OFFICIAL_XYQ_SKILLS | {'xyq-nest-skill'}
+
+def check_external_only(manifest):
+    """Keep online-installed provider packages out of this personal source bundle."""
+    names = [package['name'] for package in manifest['packages']]
+    if len(names) != len(set(names)):
+        raise ValueError('Duplicate package names in manifest')
+    bundled = set(names)
+    external = {item['name']: item for item in manifest.get('external_dependencies', [])}
+    for package in manifest['packages']:
+        parts = set(Path(package['path']).parts)
+        if package['name'] in OFFICIAL_XYQ_SKILLS or parts & OFFICIAL_XYQ_DIRS:
+            raise ValueError(f'Official Xiaoyunque skill is external-only: {package["name"]}')
+        for dep in package['dependencies']:
+            if dep not in bundled:
+                raise ValueError(f'Unknown bundled dependency: {dep}')
+        for dep in package.get('external_dependencies', []):
+            if dep not in external:
+                raise ValueError(f'Unknown external dependency: {dep}')
+    for profile, members in manifest['profiles'].items():
+        if not set(members) <= bundled:
+            raise ValueError(f'Unknown bundled package in profile: {profile}')
+
+    # Check unregistered directories too, so refresh cannot quietly bless a copy.
+    # Ignored runtime/validation folders are not part of the source bundle.
+    skip = {'.git', '__pycache__', 'node_modules', '.venv', 'local-validation', 'skill-migration-backups'}
+    for current, dirs, files in os.walk(ROOT, followlinks=False):
+        for name in dirs:
+            if name in OFFICIAL_XYQ_DIRS:
+                raise ValueError(f'Official Xiaoyunque skill directory is external-only: {Path(current)/name}')
+        dirs[:] = [name for name in dirs if name not in skip]
+        for name in files:
+            path = Path(current)/name
+            if name.lower() in {'pippit-tool-cli', 'pippit-tool-cli.exe'}:
+                raise ValueError(f'Official CLI binary is external-only: {path}')
+            if name == 'SKILL.md':
+                content = path.read_text(encoding='utf-8-sig')
+                frontmatter = re.match(r'\A---\s*\n(.*?)\n---(?:\s|$)', content, re.S)
+                if frontmatter:
+                    match = re.search(r'^name:\s*[\"\x27]?([^\s\"\x27]+)', frontmatter[1], re.M)
+                    if match and match[1] in OFFICIAL_XYQ_SKILLS:
+                        raise ValueError(f'Official Xiaoyunque skill is external-only, including renamed copies: {path}')
 
 def digest(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -25,6 +69,7 @@ def safe_join(base, rel):
     return path
 
 def verify(manifest):
+    check_external_only(manifest)
     for package in manifest['packages']:
         base = safe_join(ROOT, package['path'])
         for rel, sha in package['files'].items():
@@ -60,6 +105,7 @@ def main():
     a = p.parse_args()
     manifest = json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))
     if a.command == 'refresh':
+        check_external_only(manifest)
         for package in manifest['packages']:
             base = safe_join(ROOT, package['path'])
             if not (base/'SKILL.md').is_file(): raise FileNotFoundError(base/'SKILL.md')

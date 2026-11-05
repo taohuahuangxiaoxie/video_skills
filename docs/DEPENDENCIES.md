@@ -4,6 +4,12 @@
 
 Prompt Master、FACS、H3 提示词及导演指导可读取 Markdown 使用。真正生图仍依赖目标环境的图像工具；技能文件不携带账号、工具授权或平台额度。Higgsfield 中平台专用子技能按实际任务和可用工具使用，模型规格快照需按任务核验时效。
 
+## 小云雀官方外部依赖
+
+本仓库只包含自有 [xyq-project-workflow](../skills/xyq-project-workflow/SKILL.md)。官方 `xyq-skill`、`xyq-short-drama-skill`、`xyq-marketing-skill` 与 CLI 从 [Pippit-dev/cli](https://github.com/Pippit-dev/cli) 在线安装/更新，实际入口见自有技能；不复制官方源码、二进制、缓存或账号到本仓库、个人技能包或 GitHub。正常本机运行安装与个人维护源码分开。
+
+`manifest.json.external_dependencies` 只记录来源和运行依赖，`manage.py install` 不自动下载它们。新一轮平台执行任务按用户已确认的更新偏好检查官方稳定版；仅安装个人规则或编写提示词不启动平台任务。官方技能的安装检查不等于检查最新版，CLI 和配套技能都应核对。`refresh`、`verify`、`install` 会拒绝官方技能目录、改名后的官方技能入口及 CLI 二进制进入本源码包；发布前还需核对 Git 跟踪文件，`.gitignore` 不会取消已跟踪文件。
+
 ## 普通视频处理
 
 需要 Python 3.10+、FFmpeg 和 FFprobe。转码脚本仅用 Python 标准库。

@@ -1,6 +1,6 @@
 # 技能总索引
 
-本仓库包含 **20 个顶层技能包、53 个技能入口**。按任务选择技能；整包安装不表示每次加载全部技能。
+本仓库包含 **21 个顶层技能包、54 个技能入口**。按任务选择技能；整包安装不表示每次加载全部技能。
 
 [安装与使用](README.md) · [包依赖](docs/INVENTORY.md) · [运行环境](docs/DEPENDENCIES.md) · [个人默认规则](preferences/AGENTS.fragment.md)
 
@@ -11,6 +11,8 @@
 | 细化图片/视频提示词 | [Prompt Master](skills/prompt-master/SKILL.md) |
 | 人物表情、换装发型和身份一致 | [FACS本地规则](skills/higgsfield-prompt-writing/skills/higgsfield-facs/SKILL.md) · [换装经验](skills/higgsfield-prompt-writing/skills/higgsfield-facs/references/wardrobe-identity-performance.md) |
 | Seedance提示词 | [Prompt Master](skills/prompt-master/SKILL.md) → 按需补充[Seedance](skills/higgsfield-prompt-writing/skills/higgsfield-seedance/SKILL.md) |
+| 小云雀视频提交、恢复和交付 | [项目默认与官方 CLI 路由](skills/xyq-project-workflow/SKILL.md)，官方技能在线安装 |
+| 原片复刻、原声节奏和局部接回 | [复刻与状态连续性](skills/prompt-master/references/video-recreation-continuity.md) · [局部替换](skills/prompt-master/references/video-local-replacement.md) |
 | 战争群战、动作物理与 Seedance 2.5 打斗 | [动作物理](skills/action-choreography-reference/SKILL.md) · [战斗导演](skills/seedance-2-5-fight-director/SKILL.md) |
 | 高速运镜、关键画面与声画设计 | [视听语言](skills/cinematic-audiovisual-language/SKILL.md) · [主镜机位](skills/master-shot-camera-planning/SKILL.md) |
 | H3提示词 | [Prompt Master](skills/prompt-master/SKILL.md) → [H3格式](skills/h3-prompt-writing/SKILL.md) |
@@ -46,6 +48,7 @@
 | [cinematic-audiovisual-language](skills/cinematic-audiovisual-language/SKILL.md) | 影视镜头语法、连续性、运镜与声画节奏 | 1 |
 | [master-shot-camera-planning](skills/master-shot-camera-planning/SKILL.md) | 由关键画面反推空间关系、机位与切镜路线 | 1 |
 | [seedance-2-5-fight-director](skills/seedance-2-5-fight-director/SKILL.md) | Seedance 2.5 战斗剧本、动作波段与可执行提示词 | 1 |
+| [xyq-project-workflow](skills/xyq-project-workflow/SKILL.md) | 小云雀项目默认、官方在线依赖与视频提交/恢复/交付 | 1 |
 
 ## Higgsfield 子技能
 
@@ -62,7 +65,7 @@
 | [higgsfield-character-design](skills/higgsfield-prompt-writing/skills/higgsfield-character-design/SKILL.md) | 人物、世界和故事的前期设计与视觉设定。 |
 | [higgsfield-cinema](skills/higgsfield-prompt-writing/skills/higgsfield-cinema/SKILL.md) | Cinema Studio 多镜头、光学设置与角色一致性工作流。 |
 | [higgsfield-content-factory](skills/higgsfield-prompt-writing/skills/higgsfield-content-factory/SKILL.md) | 多条广告内容的规划、生产和活动流程；执行仍需对应授权。 |
-| [higgsfield-facs](skills/higgsfield-prompt-writing/skills/higgsfield-facs/SKILL.md) | 自然表情与身份保持；含本地换装发型差异、笑意起落和切镜连续性规则。 |
+| [higgsfield-facs](skills/higgsfield-prompt-writing/skills/higgsfield-facs/SKILL.md) | 自然表情与身份保持；含换装发型、连续表演、动画表情转真人及年龄/风格参考分离。 |
 | [higgsfield-gpt-image-2](skills/higgsfield-prompt-writing/skills/higgsfield-gpt-image-2/SKILL.md) | GPT Image 2 图片提示词、参考板和排版组织。 |
 | [higgsfield-image-shots](skills/higgsfield-prompt-writing/skills/higgsfield-image-shots/SKILL.md) | 静态人物或场景图的构图、景别和取景。 |
 | [higgsfield-marketing-studio](skills/higgsfield-prompt-writing/skills/higgsfield-marketing-studio/SKILL.md) | Marketing Studio 的广告预设与输入组织。 |
@@ -94,12 +97,13 @@
 | `core` | 6 | 提示词、表情和视频处理核心 |
 | `h3` | 8 | 核心加H3 |
 | `creative` | 16 | 核心加导演/广告/字幕/武侠短片 |
-| `studio` | 18 | 日常创作推荐组合 |
+| `studio` | 19 | 日常创作推荐组合 |
 | `legacy` | 1 | 旧模仿流程，自动补齐依赖 |
 | `remote` | 1 | 特定远程主机，另配连接环境 |
-| `all` | 20 | 全部技能包 |
+| `all` | 21 | 全部技能包 |
 | `wuxia` | 2 | 武侠仙侠故事与影像制作 |
 | `wuxia-production` | 10 | 武侠战争、动作机位与Seedance 2.5制作 |
+| `xyq` | 1 | 小云雀项目规则；官方技能在线安装 |
 
 表中分组包数为直接成员；选择单包或旧流程时，安装脚本还会补齐依赖。
 

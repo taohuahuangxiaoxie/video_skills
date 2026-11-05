@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "snapshot": "2026-10-16",
+  "snapshot": "2026-11-04",
   "profiles": {
     "core": [
       "prompt-master",
@@ -56,7 +56,8 @@
       "action-choreography-reference",
       "cinematic-audiovisual-language",
       "master-shot-camera-planning",
-      "seedance-2-5-fight-director"
+      "seedance-2-5-fight-director",
+      "xyq-project-workflow"
     ],
     "legacy": [
       "h3-video-mimic"
@@ -84,7 +85,8 @@
       "action-choreography-reference",
       "cinematic-audiovisual-language",
       "master-shot-camera-planning",
-      "seedance-2-5-fight-director"
+      "seedance-2-5-fight-director",
+      "xyq-project-workflow"
     ],
     "wuxia": [
       "wuxia-emotional-storytelling",
@@ -101,6 +103,9 @@
       "master-shot-camera-planning",
       "seedance-2-5-fight-director",
       "video-copyright-triage"
+    ],
+    "xyq": [
+      "xyq-project-workflow"
     ]
   },
   "packages": [
@@ -118,7 +123,9 @@
         "README.md": "78ac7daf8bac2161923188d9ad92249ad11aa565fbbc64b995f3bf4cfa03af2b",
         "references/patterns.md": "246073097e63aec5dc5598c04eb74d313275984582594acb6322726793e80bd3",
         "references/templates.md": "5a678b8e20ec05daad4fd289a2d5cafedffa71b75adbde0a1900c8891267332c",
-        "SKILL.md": "9b5871722ac89d1c9e51b29fd9da78aaef42d6a0fae1abbb4821362699fb5024"
+        "references/video-local-replacement.md": "bfeae848143ed735483d32fea09051879d6668c791469dd5aa1efce0e4652821",
+        "references/video-recreation-continuity.md": "ac81739636ba57cd919934e46a314d2552c4d6bce00972f224174cb60ebe387c",
+        "SKILL.md": "c3122d076e2f3d731ed901d43c8501c146cd16d72a2187815b556bde6e909026"
       }
     },
     {
@@ -189,8 +196,9 @@
         "skills/higgsfield-cinema/SKILL.md": "5c0d01526818a6ea360343dea0b0ac1811c30cebc2e6747c4e262d9e1fdcce5c",
         "skills/higgsfield-content-factory/publish-and-report-workflow.md": "2c59c55f3a10acde4cf64dffca49fdbc981cd42427f7bb0d8d1cced2e639bf2a",
         "skills/higgsfield-content-factory/SKILL.md": "8e1c7e1ea80ec5d92f1360746f40e086fc50a214176da1a1c56dcac7d4088d68",
+        "skills/higgsfield-facs/references/performance-continuity.md": "3851ff6b1316622c350cff71bef536c7bea5ddadd0e9840ed2d3139488045c37",
         "skills/higgsfield-facs/references/wardrobe-identity-performance.md": "849e2a15d591c23668c21eb3a491ecb38c41310d596eecccc639c5ccfe5c03eb",
-        "skills/higgsfield-facs/SKILL.md": "76d1156c82d36f66ef00258931215c0224952e67e008f8ca7c42de14f6876677",
+        "skills/higgsfield-facs/SKILL.md": "e5360f5b8dbb729c0ea7c7b4e82b9874994a4f31f3cf948e0ff9cdb83d6967d2",
         "skills/higgsfield-gpt-image-2/reference-sheet-workflow.md": "3ee4d3c16475f7fb08699afbcdf6234af32f85e2cc246ba66d87eeb2f5ffaf56",
         "skills/higgsfield-gpt-image-2/SKILL.md": "cbc0a6d68bd24f92db413661613818fcbed2d6583bd3907f2cbaa90c9e1f242b",
         "skills/higgsfield-gpt-image-2/static-ads-workflow.md": "e2c50b0ee56d001b3b3453efc53c6954fce80c0ea69947d40a8a188401288a66",
@@ -618,6 +626,22 @@
         "scripts/first_run.py": "ff3af41e066d4346dd989b0e0f91537416e256ea02d6fea97b062a5e66069422",
         "SKILL.md": "34acac19b88f85ae05b9b7f995744543992d62ee6b08561be3b6e879781bcaa7"
       }
+    },
+    {
+      "name": "xyq-project-workflow",
+      "path": "skills/xyq-project-workflow",
+      "role": "小云雀项目默认、官方在线依赖与视频提交/恢复/交付",
+      "dependencies": [
+        "prompt-master"
+      ],
+      "external_dependencies": [
+        "pippit-official"
+      ],
+      "skill_entries": 1,
+      "files": {
+        "agents/openai.yaml": "63f5bc99dcf5611582e01df0af6bd386e6899fbeef6cfb1b67502096b9dda822",
+        "SKILL.md": "8ead03dfb574abe50b556976547fbbb1131d62f3efd2e00854631abe421501e1"
+      }
     }
   ],
   "exclusions": [
@@ -631,5 +655,20 @@
     ".claude",
     "Python caches"
   ],
-  "updated_at": "2026-10-30"
+  "updated_at": "2026-11-04",
+  "external_dependencies": [
+    {
+      "name": "pippit-official",
+      "skill_names": [
+        "xyq-skill",
+        "xyq-short-drama-skill",
+        "xyq-marketing-skill"
+      ],
+      "source": "https://github.com/Pippit-dev/cli",
+      "package": "@pippit-dev/cli",
+      "distribution": "online-installed-runtime-only",
+      "bundled": false,
+      "policy": "Official skills, CLI binaries, caches and credentials are excluded from personal skill source, migration archives and GitHub. The personal wrapper stores defaults only."
+    }
+  ]
 }

@@ -37,3 +37,7 @@ Higgsfield保留其字体说明与上游文档；本迁移包未启用或安装�
 - `seedance-2-5-fight-director`：[liyue-aigc/seedance-2-5-fight-director](https://github.com/liyue-aigc/seedance-2-5-fight-director)。
 
 `wuxia-visual-direction`同步本工程已确认的分区战场、动作与现场声规则。包内历史版本与验证状态说明原样保留，不把单次通过经验作为模型保证。
+
+## 2026-11-04 自有制作规则
+
+`xyq-project-workflow` 与新增的复刻、局部接回及表演参考由本工程经用户确认的制作经验整理；未单独指定 LICENSE。小云雀官方技能及 CLI 仅记录 [Pippit-dev/cli](https://github.com/Pippit-dev/cli) 在线来源，未复制或重新分发。保留 Prompt Master 和 Higgsfield 的既有作者及许可。

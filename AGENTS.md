@@ -8,3 +8,4 @@
 - 修改后按需运行 `python scripts/manage.py refresh --apply`、`python scripts/build_index.py`、`python scripts/manage.py verify`、`python scripts/build_index.py --check`。Python运行时由当前电脑提供。
 - 新增顶层包要登记manifest中的用途、依赖与分组；新增子技能的中文描述写入 `docs/skill_descriptions.zh-CN.json`。`INDEX.md` 由脚本生成，不直接手改。
 - 不将安装skill理解为授权外部上传、收费生成或远程操作。用户明确要求提交/推送时按其指定远端执行，不强推、不覆盖无关修改。
+- 小云雀官方 `xyq-skill`、`xyq-short-drama-skill`、`xyq-marketing-skill` 及 CLI 作为在线安装/更新的外部依赖，不复制到本仓库、个人技能迁移包或 GitHub。只维护自有 `xyq-project-workflow` 与依赖来源；不修改官方安装副本保存个人偏好。`manage.py refresh/verify/install` 会检查此边界；保留 `.gitignore` 的排除项，发布前同时检查 Git 跟踪文件，不能仅依赖 ignore。

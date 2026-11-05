@@ -1,6 +1,6 @@
 # video_skills · 视频与人物创作技能库
 
-用于人物参考图、换装舞蹈、Seedance / H3 提示词和视频预处理的个人 skills 仓库。包含 **20 个顶层技能包、53 个技能入口**，支持整组迁移、按需安装、依赖补齐和冲突备份。
+用于人物参考图、换装舞蹈、Seedance / H3 提示词和视频预处理的个人 skills 仓库。包含 **21 个顶层技能包、54 个技能入口**，支持整组迁移、按需安装、依赖补齐和冲突备份。
 
 **导航：** [技能总索引](INDEX.md) · [包与依赖](docs/INVENTORY.md) · [运行环境](docs/DEPENDENCIES.md) · [个人默认规则](preferences/AGENTS.fragment.md) · [验证记录](docs/VALIDATION.md) · [来源与许可](THIRD_PARTY_NOTICES.md)
 
@@ -13,6 +13,7 @@
 | H3 提示词 | [h3-prompt-writing](skills/h3-prompt-writing/SKILL.md) | 按实际输入模式转换，保留动作与节奏 |
 | 武侠／仙侠创意与剧本 | [wuxia-emotional-storytelling](skills/wuxia-emotional-storytelling/SKILL.md) | 人物选择串联钩子、情绪与结尾兑现 |
 | 武侠／仙侠影像制作 | [wuxia-visual-direction](skills/wuxia-visual-direction/SKILL.md) | 唯美质感、机位微表情、素材衔接；生成素材不含配乐 |
+| 小云雀视频执行 | [xyq-project-workflow](skills/xyq-project-workflow/SKILL.md) | Fast VIP 默认、任务恢复与交付；官方技能在线更新 |
 | 处理参考视频 | [video-reference-prep](skills/video-reference-prep/SKILL.md) | 24fps、等比低分辨率、无音轨 |
 | 处理生成视频 | [generated-video-finish](skills/generated-video-finish/SKILL.md) | 首1尾3帧、清理生成元数据；保留尺寸、帧间隔和同步音频 |
 | 生成深度参考 | [temporal-depth-reference](skills/temporal-depth-reference/SKILL.md) | 先低分辨率24fps预处理，再真实时序深度估计 |
@@ -24,7 +25,7 @@
 
 ```text
 video_skills/
-├── skills/                         # 20个顶层技能包，保留各自资源与许可
+├── skills/                         # 21个顶层技能包，保留各自资源与许可
 │   ├── prompt-master/
 │   ├── higgsfield-prompt-writing/  # 父入口及33个子技能，保持相对目录
 │   ├── h3-prompt-writing/
@@ -37,7 +38,7 @@ video_skills/
 ├── scripts/build_index.py        # 生成或检查中文技能索引
 ├── docs/                         # 依赖、清单、验证及中文描述数据
 ├── manifest.json                 # 分组、依赖、技能文件SHA-256
-├── INDEX.md                      # 53个技能入口的中文索引
+├── INDEX.md                      # 54个技能入口的中文索引
 ├── AGENTS.md                     # 本源码仓库的维护约定
 └── THIRD_PARTY_NOTICES.md         # 保留上游作者与已有许可
 ```
@@ -62,13 +63,14 @@ python scripts/manage.py install --profile studio --with-rules --apply
 
 | 分组 | 顶层包数 | 适用范围 |
 | --- | --- | --- |
-| `studio` | 18 | 推荐日常创作：核心、H3、导演、广告、字幕和武侠短片 |
+| `studio` | 19 | 推荐日常创作：核心、H3、导演、广告、字幕和武侠短片 |
 | `core` | 6 | 提示词、表情、版权和三类视频处理 |
 | `h3` | 8 | 核心加H3提示词和容量经验 |
 | `creative` | 16 | 核心加导演、广告、字幕和武侠短片 |
-| `all` | 20 | 全部，含旧模仿流程和特定远程主机技能 |
+| `all` | 21 | 全部，含旧模仿流程和特定远程主机技能 |
 | `wuxia` | 2 | 武侠／仙侠情绪故事与影像制作，可不安装通用创作包 |
 | `wuxia-production` | 10 | 郭靖等武侠战争项目：导演、动作物理、主镜机位、Seedance 2.5 和版权诊断 |
+| `xyq` | 1 | 小云雀项目规则，自动补齐提示词依赖；官方技能在线安装 |
 | `legacy` / `remote` | 1起 | 单独选择旧流程或远程技能，自动补齐所需依赖 |
 
 选择单个顶层技能包：
@@ -111,3 +113,9 @@ git diff --check
 补入动作物理、视听语言、主镜机位和 Seedance 2.5 战斗导演四个包；武侠视觉技能同步分簇战场、自然光遮挡、高速动作、现场声音及撞击后物理经验。保留既有角色声线连续性更新。推荐此类项目使用 `wuxia-production` 分组，安装方法同上，将 `--profile studio` 改为 `--profile wuxia-production`。
 
 这里只保存技能源码和通用经验。项目参考图、参考视频、任务摘要另行迁移；不把生成视频、个人项目日志、账号或素材打入 Git。
+
+## 小云雀与复刻经验（2026-11-04）
+
+新增自有 `xyq-project-workflow`，Prompt Master 补充原片节奏/状态连续性与局部接回参考，FACS 补充克制表演、动画表情转真人及年龄/风格分离。CL 的台词、切点、15 秒上限及素材仍留在该任务，不进入通用技能。
+
+小云雀官方三个技能和 CLI 作为[在线外部依赖](docs/DEPENDENCIES.md#小云雀官方外部依赖)，不打包入库。个人规则可单独安装：`python scripts/manage.py install --profile xyq --apply`；此命令不下载官方依赖、不登录、不生成视频。源码检查：`python scripts/test_external_dependencies.py`。

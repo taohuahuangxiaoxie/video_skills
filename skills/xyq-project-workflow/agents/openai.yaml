@@ -1,0 +1,5 @@
+interface:
+  display_name: "小云雀项目视频工作流"
+  short_description: "沿用项目模型与素材配置，通过官方小云雀 CLI 提交、恢复并验收视频"
+policy:
+  allow_implicit_invocation: true
